@@ -41,3 +41,36 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Base
+    uniqueID: 1190560725
+    locked: 0
+  - name: Detalles
+    uniqueID: 73100643
+    locked: 0
+  - name: Enemigos
+    uniqueID: 2028564969
+    locked: 0
+  - name: Efectos
+    uniqueID: 262340323
+    locked: 0
+  - name: Sombra Plant
+    uniqueID: 2934861561
+    locked: 0
+  - name: Plant
+    uniqueID: 2352024195
+    locked: 0
+  - name: Sombra Trees
+    uniqueID: 461207461
+    locked: 0
+  - name: Arboles
+    uniqueID: 485484099
+    locked: 0
+  - name: Wall
+    uniqueID: 3763715071
+    locked: 0
+  - name: Decorasion
+    uniqueID: 153058475
+    locked: 0
+  - name: Player
+    uniqueID: 4229952917
+    locked: 0
