@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -47,9 +48,6 @@ TagManager:
   - name: Detalles
     uniqueID: 73100643
     locked: 0
-  - name: Enemigos
-    uniqueID: 2028564969
-    locked: 0
   - name: Efectos
     uniqueID: 262340323
     locked: 0
@@ -67,6 +65,9 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 3763715071
+    locked: 0
+  - name: Enemigos
+    uniqueID: 2028564969
     locked: 0
   - name: Decorasion
     uniqueID: 153058475
