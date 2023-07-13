@@ -1331,6 +1331,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6999149990541848168, guid: 077356e91233fb545993125173c720e8, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 6999149990541848168, guid: 077356e91233fb545993125173c720e8, type: 3}
       propertyPath: m_Name
       value: EnemySpawnpoint (2)
       objectReference: {fileID: 0}
@@ -27946,6 +27950,10 @@ PrefabInstance:
     - target: {fileID: 6999149990541848168, guid: 077356e91233fb545993125173c720e8, type: 3}
       propertyPath: m_Name
       value: EnemySpawnpoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 6999149990541848168, guid: 077356e91233fb545993125173c720e8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6999149990541848169, guid: 077356e91233fb545993125173c720e8, type: 3}
       propertyPath: m_RootOrder
