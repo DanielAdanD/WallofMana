@@ -4,60 +4,25 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float health = 8f;
-    public float moveSpeed = 5f;
-    public float jumpForce = 5f;
-    private bool isJumping = false;
-    private Rigidbody2D rb;
-    public GameObject childObject; // Objeto hijo cuyo SpriteRenderer se modificará
+    public float moveSpeed = 0f;
+    public Rigidbody2D rb;
+    public Camera cam;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    Vector2 movement;
+    Vector2 mousePos;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && health > 0)
-        {
-            health -= 1;
-        }
-        if (Input.GetKeyDown(KeyCode.M) && health < 8)
-        {
-            health += 1;
-        }
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
 
     void FixedUpdate()
     {
-        // Movimiento horizontal
-        float horizontalInput = Input.GetAxis("Horizontal");
-        transform.position += new Vector3(horizontalInput, 0, 0) * Time.deltaTime * moveSpeed;
-
-        // Flip sprite renderer del objeto hijo
-        SpriteRenderer sr = childObject.GetComponent<SpriteRenderer>();
-        if (horizontalInput < 0)
-        {
-            sr.flipX = true;
-        }
-        else if (horizontalInput > 0)
-        {
-            sr.flipX = false;
-        }
-
-        // Salto
-        if (Input.GetButtonDown("Jump") && !isJumping)
-        {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isJumping = true;
-        }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isJumping = false;
-        }
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector2 lookDir = mousePos - rb.position;
+        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
     }
 }
