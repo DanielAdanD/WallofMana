@@ -5,7 +5,8 @@ using UnityEngine;
 public class SpellCasting : MonoBehaviour
 {
     public Transform firePoint;
-    public GameObject castPrefab;
+    public GameObject fireBallPrefab;
+    public GameObject ManaMPrefab;
 
     public float castForce = 40f;
 
@@ -15,11 +16,21 @@ public class SpellCasting : MonoBehaviour
         {
             CastFire();
         }
+        else if (Input.GetButtonDown("Fire1"))
+        {
+            CastManaM();
+        }
     }
     void CastFire()
     {
-        GameObject FireBall = Instantiate(castPrefab, firePoint.position, firePoint.rotation);
+        GameObject FireBall = Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = FireBall.GetComponent<Rigidbody2D>();
+        rb.AddForce(firePoint.up * castForce, ForceMode2D.Impulse);
+    }
+    void CastManaM()
+    {
+        GameObject ManaMissile = Instantiate(ManaMPrefab, firePoint.position, firePoint.rotation);
+        Rigidbody2D rb = ManaMissile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * castForce, ForceMode2D.Impulse);
     }
 }

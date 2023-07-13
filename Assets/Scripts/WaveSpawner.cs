@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public GameObject outtro;
     public enum SpawnState{ SPAWNING, WAITING, COUNTING };
     [System.Serializable]
     public class Wave
@@ -13,7 +15,7 @@ public class WaveSpawner : MonoBehaviour
         public int count;
         public float rate;
     }
-
+    public string levelName;
     public Wave[] waves;
     private int nextWave = 0;
     public Transform[] spawnPoints;
@@ -59,6 +61,19 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+    public void LoadLevelAsync(string levelName)
+    {
+        Debug.Log("Cargando nivel: " + levelName);
+        outtro.SetActive(true);
+    }
+
+
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+    }
+
+
     void WaveCompleted()
     {
         Debug.Log("Wave Completed!");
@@ -66,9 +81,8 @@ public class WaveSpawner : MonoBehaviour
         waveCountdown = timeBetweenWaves;
         if (nextWave + 1 > waves.Length - 1)
         {
-                //The game is completed here, so stat multipliers or an end screen can be added here, must implement a next level though.
-                nextWave = 0;
-                Debug.Log ("Completed all waves! Looping...");
+            //The game is completed here, so stat multipliers or an end screen can be added here, must implement a next level though.
+            SceneManager.LoadScene(levelName);
         }
         else
         {
