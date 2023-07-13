@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
@@ -22,6 +23,8 @@ public class WaveSpawner : MonoBehaviour
     private float waveCountdown;
     private float searchCountdown = 1f;
     private SpawnState state = SpawnState.COUNTING;
+
+    public UnityEvent onFinishWaves;
 
     void Start()
     {
@@ -68,7 +71,7 @@ public class WaveSpawner : MonoBehaviour
         if (nextWave + 1 > waves.Length - 1)
         {
             //The game is completed here, so stat multipliers or an end screen can be added here, must implement a next level though.
-
+            onFinishWaves.Invoke();
         }
         else
         {

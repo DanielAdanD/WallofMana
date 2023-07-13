@@ -36803,12 +36803,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameMaster
       objectReference: {fileID: 0}
-<<<<<<<< HEAD:Assets/Scenes/Testing Ground.unity
-    - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
-      propertyPath: spawnPoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 188223911}
-========
     - target: {fileID: 373971316265595738, guid: 2bed758d29117cd42bfc5685b21e8ba7, type: 3}
       propertyPath: m_TileColorArray.Array.size
       value: 1
@@ -40329,7 +40323,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[285].second.m_TileSpriteIndex
       value: 0
       objectReference: {fileID: 0}
->>>>>>>> 40b9e0636e0144b692da6bc5a6cd5015db1bb382:Assets/Scenes/Pruebas.unity
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
 --- !u!1001 &2375320970274589241

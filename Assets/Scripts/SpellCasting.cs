@@ -7,18 +7,26 @@ public class SpellCasting : MonoBehaviour
     public Transform firePoint;
     public GameObject fireBallPrefab;
     public GameObject ManaMPrefab;
+    public float attkDelay = 1;
+    public float currentAttkDelay = 0;
 
     public float castForce = 40f;
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire4"))
-        {
-            CastFire();
+        if(currentAttkDelay <= 0) { 
+            if (Input.GetButton("Fire4"))
+            {
+                CastFire();
+            }
+            else if (Input.GetButton("Fire1"))
+            {
+                CastManaM();
+            }
         }
-        else if (Input.GetButtonDown("Fire1"))
+        else
         {
-            CastManaM();
+            currentAttkDelay -= Time.deltaTime;
         }
     }
     void CastFire()
@@ -26,11 +34,13 @@ public class SpellCasting : MonoBehaviour
         GameObject FireBall = Instantiate(fireBallPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = FireBall.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * castForce, ForceMode2D.Impulse);
+        currentAttkDelay = attkDelay;
     }
     void CastManaM()
     {
         GameObject ManaMissile = Instantiate(ManaMPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D rb = ManaMissile.GetComponent<Rigidbody2D>();
         rb.AddForce(firePoint.up * castForce, ForceMode2D.Impulse);
+        currentAttkDelay = attkDelay;
     }
 }

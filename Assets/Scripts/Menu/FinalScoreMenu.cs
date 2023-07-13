@@ -14,6 +14,7 @@ public class FinalScoreMenu : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 0;
         currentScoreText.text = "" + lm.currentScore;
         totalScoreText.text = "" + lm.GetTotalScore();
         universalScoreText.text = "0";
@@ -35,7 +36,6 @@ public class FinalScoreMenu : MonoBehaviour
 
         currentToitalScore = lm.currentScore + lm.GetTotalScore();
         totalScoreText.text = "" + currentToitalScore;
-
 
     }
 }
