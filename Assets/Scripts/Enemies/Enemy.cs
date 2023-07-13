@@ -28,6 +28,17 @@ public class Enemy : MonoBehaviour
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(gameObject); 
     }
+
+    void GetNextWaypoint()
+    {
+        if (wavepointIndex >= Waypoints.points.Length - 1)
+        {
+            Destroy(gameObject);
+        }
+        wavepointIndex++;
+        target = Waypoints.points[wavepointIndex];
+    }
+
     void Update()
     {
         Vector2 dir = target.position - transform.position;
@@ -36,14 +47,14 @@ public class Enemy : MonoBehaviour
         {
             GetNextWaypoint();
         }
-    }
-    void GetNextWaypoint()
-    {
-        if (wavepointIndex >= Waypoints.points.Length - 1)
-        { 
-            Destroy(gameObject);    
+        if (dir.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
         }
-        wavepointIndex++;
-        target = Waypoints.points[wavepointIndex];
+        else if (dir.x > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
     }
 }
