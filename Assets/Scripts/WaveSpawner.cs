@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class WaveSpawner : MonoBehaviour
@@ -20,9 +21,12 @@ public class WaveSpawner : MonoBehaviour
     private int nextWave = 0;
     public Transform[] spawnPoints;
     public float timeBetweenWaves = 5f;
+    public float timeTotal = 5f;
     private float waveCountdown;
     private float searchCountdown = 1f;
     private SpawnState state = SpawnState.COUNTING;
+
+    public TextMeshProUGUI totalTimeUI;
 
     public UnityEvent onFinishWaves;
 
@@ -37,6 +41,8 @@ public class WaveSpawner : MonoBehaviour
 
     void Update()
     {
+        timeTotal += Time.deltaTime;
+        totalTimeUI.text = ConvertirTiempo((int)timeTotal);
         if (state == SpawnState.WAITING)
         {
             // Check if enemies are still alive.
@@ -113,6 +119,15 @@ public class WaveSpawner : MonoBehaviour
         Debug.Log("Spawning Enemy:" + _enemy.name);
         Transform _sp = spawnPoints[Random.Range (0, spawnPoints.Length)];
         Instantiate(_enemy, _sp.position, _sp.rotation);
+    }
+
+    string ConvertirTiempo(int tiempoEnSegundos)
+    {
+        int minutos = tiempoEnSegundos / 60;
+        int segundosRestantes = tiempoEnSegundos % 60;
+
+        string tiempoFormateado = string.Format("{0:00}:{1:00}", minutos, segundosRestantes);
+        return tiempoFormateado;
     }
 
 }

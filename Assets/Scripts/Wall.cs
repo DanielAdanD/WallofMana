@@ -22,15 +22,4 @@ public class Wall : MonoBehaviour
         Debug.Log("The wall was destroyed!");
         animator.SetBool("isDead", true);
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
