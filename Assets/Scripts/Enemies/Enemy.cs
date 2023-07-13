@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        target =Waypoints.points[0];
+        target = Waypoints.points[0];
     }
     public void TakeDamage (int damage)
     {
@@ -41,12 +41,19 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+        {
+            target = Waypoints.points[0];
+        }
         Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-        if (Vector2.Distance(transform.position, target.position) <= 0.2f)
+        transform.Translate(dir.normalized * speed * Time.deltaTime);
+        
+        if (Vector2.Distance(transform.position, target.position) <= 1f)
         {
             GetNextWaypoint();
         }
+
+
         if (dir.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
