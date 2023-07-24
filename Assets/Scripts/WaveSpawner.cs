@@ -27,6 +27,7 @@ public class WaveSpawner : MonoBehaviour
     private SpawnState state = SpawnState.COUNTING;
 
     public TextMeshProUGUI totalTimeUI;
+    public TextMeshProUGUI waveText;
 
     public UnityEvent onFinishWaves;
 
@@ -69,6 +70,17 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
+    public void IncreaseWave(int addedWave)
+    {
+        nextWave += addedWave;
+        UpdateWave();
+    }
+
+    private void UpdateWave()
+    {
+        waveText.text = "" + nextWave;
+    }
+
     void WaveCompleted()
     {
         Debug.Log("Wave Completed!");
@@ -82,6 +94,7 @@ public class WaveSpawner : MonoBehaviour
         else
         {
             nextWave++;
+            UpdateWave();
         }
     }
 
@@ -128,6 +141,14 @@ public class WaveSpawner : MonoBehaviour
 
         string tiempoFormateado = string.Format("{0:00}:{1:00}", minutos, segundosRestantes);
         return tiempoFormateado;
+    }
+    string WaveToNumber(int waveNumber)
+    {
+        int nextWave = waveNumber / 0;
+
+        string formatedWave = string.Format("0");
+        
+        return formatedWave;
     }
 
 }

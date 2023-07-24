@@ -1,19 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy : MonoBehaviour
 {
     public int health = 100;
     public GameObject deathEffect;
-    public float speed = 10f;
-    private Transform target;
-    private int wavepointIndex = 0;
 
-    void Start()
-    {
-        target = Waypoints.points[0];
-    }
     public void TakeDamage (int damage)
     {
         health -= damage;
@@ -25,43 +19,13 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Instantiate(deathEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 2f);
         Destroy(gameObject); 
     }
-
-    void GetNextWaypoint()
-    {
-        if (wavepointIndex >= Waypoints.points.Length - 1)
-        {
-            Destroy(gameObject);
-        }
-        wavepointIndex++;
-        target = Waypoints.points[wavepointIndex];
-    }
-
+    
     void Update()
     {
-        if (target == null)
-        {
-            target = Waypoints.points[0];
-        }
-        Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime);
-        
-        if (Vector2.Distance(transform.position, target.position) <= 1f)
-        {
-            GetNextWaypoint();
-        }
-
-
-        if (dir.x < 0)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (dir.x > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
 
     }
 }

@@ -15,7 +15,7 @@ public class ManaMissile : MonoBehaviour
             enemy.TakeDamage(damage);
         }
         GameObject effect = Instantiate(hitEffect, transform.position, transform.rotation);
-        Destroy(effect, 3f);
+        Destroy(effect, 2f);
         Destroy(gameObject);
     }
 }

@@ -8,18 +8,27 @@ public class Wall : MonoBehaviour
     private Animator animator;
     private Rigidbody2D rb;
     public int health = 100;
+    public GameObject deathEffect;
+    public GameObject gameOverMenu;
+
     public void TakeDamage (int damageAmount)
     { 
         health -= damageAmount;
         if (health <= 0)
         {
             Die();
+            gameOver();
         }
     }
 
     private void Die()
     {
         Debug.Log("The wall was destroyed!");
-        animator.SetBool("isDead", true);
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+    }
+    private void gameOver()
+    {
+        gameOverMenu.SetActive(true);
+        Time.timeScale = 0;
     }
 }
