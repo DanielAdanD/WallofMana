@@ -771,6 +771,7 @@ GameObject:
   - component: {fileID: 4153691026569405537}
   - component: {fileID: 7230016494585430472}
   - component: {fileID: 7184600852115297717}
+  - component: {fileID: 5048343082890977412}
   m_Layer: 5
   m_Name: 'Barra Vida '
   m_TagString: Untagged
@@ -839,6 +840,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5048343082890977412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574138889355665281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd9cbeab2ed70d4bb34bf62c57fbf3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarImage: {fileID: 7375838245322210275}
+  wall: {fileID: 0}
 --- !u!1 &1931336330069383615
 GameObject:
   m_ObjectHideFlags: 0

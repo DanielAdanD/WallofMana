@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -8890282915889177518}
   - component: {fileID: 4383387397793977537}
   - component: {fileID: 358974677495434699}
+  - component: {fileID: 4099891575051499039}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 262340323
-  m_SortingLayer: 3
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: -1270092434, guid: 386fda9aca50c9444a6258b42f561a7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -168,3 +169,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
+--- !u!114 &4099891575051499039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757563278244784673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3a7ff7bc126e47bb58c49b610bbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonido: {fileID: 8300000, guid: 8c01b51123c848343a943dafe73e1697, type: 3}

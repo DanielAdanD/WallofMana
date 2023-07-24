@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -4610542506968571610}
   - component: {fileID: 6180308695167466331}
   - component: {fileID: 5698165554806619804}
+  - component: {fileID: 4452958082611118507}
   m_Layer: 0
   m_Name: FireBall
   m_TagString: Untagged
@@ -170,3 +171,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.75, y: 1.6001277}
   m_EdgeRadius: 0
+--- !u!114 &4452958082611118507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027035341402878724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3a7ff7bc126e47bb58c49b610bbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonido: {fileID: 8300000, guid: 165f0b793fa38304790ca253f1ae8ef7, type: 3}
