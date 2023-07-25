@@ -8109,6 +8109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8866088790050248877}
+  - component: {fileID: 6995004458946507105}
   m_Layer: 5
   m_Name: Habilidades
   m_TagString: Untagged
@@ -8139,6 +8140,30 @@ RectTransform:
   m_AnchoredPosition: {x: 1410.9, y: -15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6995004458946507105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8866088790050248878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd2ecd44b963fb41b8ac222ace81d7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityImage1: {fileID: 3656030080621618391}
+  cooldown1: 0.2
+  ability1: 323
+  abilityImage2: {fileID: 9002737115636452013}
+  cooldown2: 1
+  ability2: 113
+  abilityImage3: {fileID: 2628640280327930606}
+  cooldown3: 5
+  ability3: 119
+  abilityImage4: {fileID: 1357690458944167545}
+  cooldown4: 10
+  ability4: 101
 --- !u!1 &8866088790053203128
 GameObject:
   m_ObjectHideFlags: 0
