@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 245367224844369767}
   - component: {fileID: 4113741846162172955}
   - component: {fileID: 8553096890055506039}
+  - component: {fileID: -2776027290827702978}
   m_Layer: 0
   m_Name: KamiKazeXplosion
   m_TagString: Untagged
@@ -105,3 +106,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &-2776027290827702978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7668623348878421276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3a7ff7bc126e47bb58c49b610bbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonido: {fileID: 8300000, guid: 8c01b51123c848343a943dafe73e1697, type: 3}

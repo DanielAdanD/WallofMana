@@ -25,7 +25,7 @@ public class VarraDeVida : MonoBehaviour
         // Actualizamos el llenado de la barra de vida con la salud actual del objeto Wall
         if (healthBarImage != null && wall != null)
         {
-            float fillAmount = (float)wall.health / 100f; // Calculamos el llenado como un valor entre 0 y 1
+            float fillAmount = (float)wall.health / 35f; // Calculamos el llenado como un valor entre 0 y 1
             healthBarImage.fillAmount = fillAmount;
         }
     }

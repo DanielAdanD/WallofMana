@@ -94,7 +94,7 @@ Transform:
   m_GameObject: {fileID: 8868527371012077447}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.03, y: 6.854477, z: 0}
-  m_LocalScale: {x: 6.805156, y: 6.805156, z: 6.805156}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8868527371096962983}
@@ -247,13 +247,13 @@ MonoBehaviour:
   ManaMPrefab: {fileID: 7711798789084298452, guid: 62d44a7a01bc5d14ca3e14fdb6da292f, type: 3}
   HolyStormPrefab: {fileID: 7192278070315499092, guid: e814b381545041241a2ed2c3516a0580, type: 3}
   ThunderStrikePrefab: {fileID: 2970014460269384323, guid: f0492f2c04a1351458027e8e52ad63c8, type: 3}
-  ThundersTrikeDelay: 5
+  ThundersTrikeDelay: 6
   currentThundersTrikeDelay: 0
-  ManaMDelay: 0.2
+  ManaMDelay: 0.3
   currentManaMDelay: 0
-  FireBDelay: 1
+  FireBDelay: 2.5
   currentFireBDelay: 0
-  HolyStormDelay: 10
+  HolyStormDelay: 16
   currentHolyStormDelay: 0
   castForce: 40
 --- !u!114 &1629195320908000156

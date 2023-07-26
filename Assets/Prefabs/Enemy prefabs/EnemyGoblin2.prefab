@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 2049057620}
   - component: {fileID: 2049057625}
   - component: {fileID: 2049057626}
+  - component: {fileID: 7676906074627276897}
   m_Layer: 0
   m_Name: EnemyGoblin2
   m_TagString: Enemy
@@ -156,7 +157,7 @@ MonoBehaviour:
   radius: 4
   height: 5
   canMove: 1
-  maxSpeed: 3
+  maxSpeed: 4
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -208,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e030e477c5be3434ba670d99feca6826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 25
   deathEffect: {fileID: 2269011796485336370, guid: 5009b21e622263641899789294aa265e, type: 3}
 --- !u!50 &2049057621
 Rigidbody2D:
@@ -230,7 +231,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2049057620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -329,3 +330,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &7676906074627276897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3585638272354197161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f62e54336ff565943852acdcf14247d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 100

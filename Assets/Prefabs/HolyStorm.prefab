@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2387161420648116436}
   - component: {fileID: 10768586}
   - component: {fileID: 10768585}
+  - component: {fileID: -8373131821064831383}
   m_Layer: 0
   m_Name: HolyStorm
   m_TagString: Untagged
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.48, y: 0.03}
+  m_Size: {x: 16, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -125,7 +126,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 16, y: 1}
-    newSize: {x: 0.48, y: 0.03}
+    newSize: {x: 16, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -145,4 +146,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5bc377c133ccb40a859a732c270c0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
+--- !u!114 &-8373131821064831383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7192278070315499092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3a7ff7bc126e47bb58c49b610bbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonido: {fileID: 8300000, guid: 78c569184b91c4547a8bf0eba12640f9, type: 3}

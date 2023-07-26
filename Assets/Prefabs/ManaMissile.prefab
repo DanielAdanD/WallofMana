@@ -123,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 7711798789084298452, guid: 133bb659976d5934dbd4199dee8d8703, type: 3}
   rb: {fileID: -4753824106091339914}
-  damage: 2
+  damage: 1
 --- !u!61 &1631876979777372316
 BoxCollider2D:
   m_ObjectHideFlags: 0

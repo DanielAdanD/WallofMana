@@ -157,7 +157,7 @@ MonoBehaviour:
   radius: 1
   height: 2
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 9
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e030e477c5be3434ba670d99feca6826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 6
   deathEffect: {fileID: 2269011796485336370, guid: 5009b21e622263641899789294aa265e, type: 3}
 --- !u!114 &-9177690313997296938
 MonoBehaviour:
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f62e54336ff565943852acdcf14247d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 15
+  score: 30
 --- !u!50 &-3681571361260665320
 Rigidbody2D:
   serializedVersion: 4

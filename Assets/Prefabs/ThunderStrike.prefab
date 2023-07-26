@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1620046086537298493}
   - component: {fileID: 3668364587603307055}
   - component: {fileID: 3668364587603307054}
+  - component: {fileID: 5912677591840614125}
   m_Layer: 0
   m_Name: ThunderStrike
   m_TagString: Untagged
@@ -81,7 +82,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 0.4375}
+  m_Size: {x: 2.5, y: 0.875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceeab30b506f7d4e8f5efabb98f1d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 5
 --- !u!61 &3668364587603307054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,7 +139,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 2.5, y: 0.875}
-    newSize: {x: 1.25, y: 0.4375}
+    newSize: {x: 2.5, y: 0.875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -146,3 +147,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.375, y: 7.875}
   m_EdgeRadius: 0
+--- !u!114 &5912677591840614125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2970014460269384323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6b3a7ff7bc126e47bb58c49b610bbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonido: {fileID: 8300000, guid: 4f18d311ca64f70408d33bae84edbd59, type: 3}
