@@ -530,12 +530,16 @@ PrefabInstance:
       value: GameMaster
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
+      propertyPath: timeTotal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: totalTimeUI
       value: 
       objectReference: {fileID: 883376287}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: waves.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: spawnPoints.Array.size
@@ -543,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: waves.Array.data[0].name
-      value: Bat wave
+      value: Spider wave
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: waves.Array.data[0].rate
@@ -555,6 +559,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: waves.Array.data[1].rate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
+      propertyPath: waves.Array.data[2].name
+      value: Ghoul wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
+      propertyPath: waves.Array.data[2].rate
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
@@ -591,12 +603,20 @@ PrefabInstance:
       objectReference: {fileID: 1926463525625631711, guid: 1125ea9bd7307dd41903bee00f7305d3, type: 3}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: waves.Array.data[1].count
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: waves.Array.data[1].enemy
       value: 
       objectReference: {fileID: 3585638272354197165, guid: 0cb3a77d15596384c875c2686c446d30, type: 3}
+    - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
+      propertyPath: waves.Array.data[2].count
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
+      propertyPath: waves.Array.data[2].enemy
+      value: 
+      objectReference: {fileID: 2303673122239056333, guid: fcd28edefab18514e8f95ef54588e341, type: 3}
     - target: {fileID: 466809533280643367, guid: 53d23b080f5e28640a534df5b5c8b931, type: 3}
       propertyPath: onFinishWaves.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -25734,7 +25754,7 @@ Tilemap:
       - {fileID: -653474883, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: 804188100, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: 576357920, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -10, y: 15, z: 0}
@@ -25752,7 +25772,7 @@ Tilemap:
       - {fileID: -583938642, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: -515579519, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: 2007566948, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -32, y: 16, z: 0}
@@ -25761,7 +25781,7 @@ Tilemap:
       - {fileID: -1201522357, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: -1202026026, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: -274673132, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: -11, y: 16, z: 0}
@@ -25779,7 +25799,7 @@ Tilemap:
       - {fileID: -1201522357, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: -1202026026, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
       - {fileID: -274673132, guid: a1a67b80e3b799b45a9a468b57340d0f, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -28697,7 +28717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8868527371096962983, guid: 2547a151fd50fa74ca02841cda02a36c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.114
+      value: 0.27
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2547a151fd50fa74ca02841cda02a36c, type: 3}
@@ -35182,7 +35202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2396172556693973605, guid: ce1cbdec92a729b48b4a64af63f2dfb3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
-      value: Level 5
+      value: Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 2396172556751931078, guid: ce1cbdec92a729b48b4a64af63f2dfb3, type: 3}
       propertyPath: m_Name
@@ -35238,6 +35258,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce1cbdec92a729b48b4a64af63f2dfb3, type: 3}
+--- !u!1 &2089136311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2396172556751931078, guid: ce1cbdec92a729b48b4a64af63f2dfb3, type: 3}
+  m_PrefabInstance: {fileID: 2089136310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2110810631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35385,8 +35410,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2546884969166874949, guid: 9c1657ff1af5de2409dc221757e89df6, type: 3}
       propertyPath: m_Name
-      value: Target
+      value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3451251715888651316, guid: 9c1657ff1af5de2409dc221757e89df6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545334182803940967, guid: 9c1657ff1af5de2409dc221757e89df6, type: 3}
+      propertyPath: gameOverMenu
+      value: 
+      objectReference: {fileID: 2089136311}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c1657ff1af5de2409dc221757e89df6, type: 3}
 --- !u!4 &3227155203770935179 stripped

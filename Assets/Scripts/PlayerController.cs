@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
 
     Vector2 movement;
     Vector2 mousePos;
+    Vector2 HolyStorm;
 
     private void Update()
     {
