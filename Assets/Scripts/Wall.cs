@@ -7,7 +7,7 @@ public class Wall : MonoBehaviour
     private Vector2 movement;
     private Animator animator;
     private Rigidbody2D rb;
-    public int health = 100;
+    public int health = 35;
     public GameObject deathEffect;
     public GameObject gameOverMenu;
 
